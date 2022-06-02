@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<!--Проблема с кодировкой -->
@@ -15,30 +15,61 @@
 <body>
 	<main>
 		<div class="container">
+			<h4>Повторение PHP</h4>
 			<?php
 			include 'error.php';
-			$num = 3;
-			$arr = array(2, 6, 5, 8, 9);
-			$sum = $arr[2] + $arr[3];
-			$text = 'text';
-			echo $text . $num . 'Сумма массива:' . $sum;
-			$text2 = 'helloWorld';
-			$text3 = 'абвг';
-			echo  strlen($text2); //Длина строки
-			echo mb_strlen($text3); // для вывода киррилицы
-			for ($i = 0; $i <= 9; $i++) {
-				$arr2[] = $i;
-				echo $i . '<br>';
-			}
-			var_dump($arr2);
+			$var = 'abcdes';
+			echo $var[3]; //Вывести 4 элемнт
 			echo '<br>';
-			$href = 'index.php';
-			$text4 = 'ссылка';
-			echo '<a href="' . $href . '">' . $text4 . '</a>';
-			echo '<img src="img/photo.jpg" alt="фото">';
-			echo '<input type="text">';
-			echo '<textarea name="comment" cols="20" rows="6" placeholder="tee"> </textarea>';
+			$num = '123456526485885';
 
+			for ($i = 0; $i < strlen($num); $i++) {
+				$res +=  $num[$i];
+			}
+			echo $res . '<br>';
+			var_dump($num);
+
+			$kv = 10;
+			$s = 2;
+			$r = $kv ** $s;
+			echo $r;
+			echo '<br>';
+			$text = 'Я';
+			$text .= ' знать';
+			echo $text;
+			echo '<hr>';
+			$day = 15;
+			//переключатель
+			switch ($day) {
+				case 1:
+					$v = 'зима';
+					break;
+				case 2:
+					$v = 'весна';
+					break;
+				case 3:
+					$v = 'лето';
+					break;
+				case 4:
+					$v = 'осень';
+					break;
+			}
+			if ($day < 10) {
+				echo 'первая';
+			} elseif ($day < 20) {
+				echo 'вторая';
+			} else {
+				echo 'третья';
+			}
+			echo "<hr>";
+			$year = 1600;
+			echo $year % 100;
+			echo "<hr>";
+			if (($year % 4) == 0 and ($year % 100) !== 0 or ($year % 400) == 0) {
+				echo 'высокостный';
+			} else {
+				echo 'no';
+			}
 			?>
 
 		</div>

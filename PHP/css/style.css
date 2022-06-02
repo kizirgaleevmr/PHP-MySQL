@@ -1,6 +1,23 @@
+body{
+background-color: grey;
+box-sizing: border-box;
+}
 .container{
-	margin-top: 50px;
+	padding-top: 20px;
+	background-color: beige;
+}
+div.img{
+	width: 300px;
+	height: 300px;
+	
+}
+input{
+	margin-bottom: 10px;
 }
 img{
-	width: 100px;
+	width: 300px;
+	height: 300px;
+	border-radius:50%;
+	border: solid white 10px;
+	
 }

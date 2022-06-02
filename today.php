@@ -12,7 +12,16 @@
 	<h2>Ваш первый скрипт</h2>
 	<p>Сегодняшняя дата (согласно данному веб-серверу):</p>
 	<?php echo date('l, F js Y.'); ?>
+	<input type="text">
+	<input type="radio">
+	<input type="checkbox">
+	<input type="button" value="knopka">
+	<select name="list" id="#">
+		<option value="list">as</option>
+		<option value="list">ad</option>
+	</select>
+	<?php
+	echo sprintf("%05d", 1230); ?>
 </body>
 
 </html>
-
