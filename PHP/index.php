@@ -70,8 +70,41 @@
 			} else {
 				echo 'no';
 			}
+			echo '<hr>';
+			$str = '12345';
+			if (isset($str)) {
+				# code...
+				for ($i = 0; $i < strlen($str); $i++) {
+					$sum += $str[$i];
+				}
+			}
+			echo $sum;
+			echo '<br>';
+			$arr = ['green' => 'зеленый', 'red' => 'красный', 'blue' => 'голубой'];
+			foreach ($arr as $el => $key) :
+				echo $el . '-' . $key . '<br>';
+			endforeach;
+			$arr2 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+			foreach ($arr2 as $val) {
+				if ($val != 'сб' & $val != 'вс') {
+					echo $val . '<br>';
+				} else {
+					echo '<b>' . $val . '</b>' . '<br>';
+				}
+			}
+			echo '<hr>';
+			$today = getdate();
+			$wday =  $today['weekday'];
+			echo $data;
+			$day = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+			foreach ($day as $val) {
+				if ($wday != $val) {
+					echo  $val  . '<br>';
+				} else {
+					echo '<i>' . $val . '<i>' . '<br>';
+				}
+			}
 			?>
-
 		</div>
 	</main>
 </body>
