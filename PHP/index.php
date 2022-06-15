@@ -126,7 +126,7 @@
 			}
 			$id = $_GET['id'];
 			$conten = scandir('Z:\Контракт_126-1П_2021 склад 2022\Акты Филиалы/');
-			$file = file_get_contents($conten . $id);
+			//$file = file_get_contents($conten . $id);
 			foreach ($conten as $val) {
 				if ($val != '.' & $val != '..') {
 					echo "<a href=\"index.php?id=$val\">" . $val . '</a>' . '<br>';
